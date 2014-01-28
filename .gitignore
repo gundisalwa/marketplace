@@ -8,3 +8,8 @@ test-lib
 dev-lib
 override.properties
 /nbproject/private
+
+# Node Modules #
+####################
+node_modules
+
