@@ -1,0 +1,1 @@
+requireCfg['paths']['marketplace'] = CONTEXT_PATH+'content/marketplace/resources/web/app/js';
