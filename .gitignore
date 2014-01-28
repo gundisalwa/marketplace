@@ -10,8 +10,11 @@ js-lib
 override.properties
 /nbproject/private
 
-# Node Modules #
+#   Node Modules   #
 ####################
 node_modules
 
 
+#   Old UI Files   #
+####################
+package-res/resources/old
