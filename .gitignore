@@ -6,10 +6,12 @@ dist
 /lib
 test-lib
 dev-lib
+js-lib
 override.properties
 /nbproject/private
 
 # Node Modules #
 ####################
 node_modules
+
 
