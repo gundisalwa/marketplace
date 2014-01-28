@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin title="marketplace">
-<lifecycle-listener class="org.pentaho.marketplace.MarketplaceLifeCycleListener"/>
-    <static-paths>
-        <static-path url="/marketplace/resources" localFolder="resources"/>
-    </static-paths>
 
- 
-  
-  <perspective id="marketplace.perspective" title="${marketplace}" layout-priority="-1"
-               resourcebundle="content/marketplace/resources/lang/messages" content-url="content/marketplace/resources/marketplace.html">
+  <lifecycle-listener class="org.pentaho.marketplace.MarketplaceLifeCycleListener"/>
+
+  <static-paths>
+    <static-path url="/marketplace/resources" localFolder="resources"/>
+  </static-paths>
+
+  <perspective id="marketplace.perspective" title="${marketplace}" 
+    layout-priority="-1"
+    resourcebundle="content/marketplace/resources/lang/messages" 
+    content-url="content/marketplace/resources/web/app/index.html">
   </perspective>  
   
+  <!-- This is probably just legacy from 4.x version
+  <content-generator scope="local" id="marketplace" type="MarketplaceContentGenerator" url="">
+    <classname>org.pentaho.marketplace.MarketplaceContentGenerator</classname>
+    <title>Marketplace</title>
+  </content-generator>
+  -->
 
-    <content-generator scope="local" id="marketplace" type="MarketplaceContentGenerator" url="">
-        <classname>org.pentaho.marketplace.MarketplaceContentGenerator</classname>
-        <title>Marketplace</title>
-    </content-generator>
+  <external-resources>
+    <file context="requirejs">content/marketplace/resources/web/app/marketplace-require-js-cfg.js</file>
+
+    <!-- core is the "compiled" application, it needs included here so modules can be required -->
+    <!--<file context="mantle">content/marketplace/resources/web/app/js/core.js</file>-->
+
+    <!-- puc-plugin registers itself with mantle, it depends on core.js already have been loaded -->
+    <file context="mantle">content/marketplace/resources/web/app/js/puc-plugin.js</file>
+  </external-resources>
 
 </plugin>
