@@ -14,6 +14,10 @@ override.properties
 ####################
 node_modules
 
+# JS build folder  #
+####################
+build-res/module-scripts
+
 
 #   Old UI Files   #
 ####################
