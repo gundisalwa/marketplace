@@ -2,17 +2,15 @@
 define([
   "common-ui/angular", 
   "common-ui/angular-route", 
-  "common-ui/AnimatedAngularPluginHandler",
   "marketplace/controllers/controllers",
   "marketplace/services/services",
   "marketplace/filters/filters",
   "marketplace/util",
   "common-ui/angular-ui-bootstrap",
   "common-ui/angular-resource"
-  ], function(angular, Route, AnimatedAngularPluginHandler, controllers, services, filters, Util){
+  ], function(angular, Route, controllers, services, filters, Util){
   'use strict';
-  var pluginHandler = new AnimatedAngularPluginHandler();
-  pluginHandler.module('marketplaceApp', ['ui.bootstrap', 'ngResource']);
+  angular.module('marketplaceApp', ['ui.bootstrap', 'ngResource']);
 
   var routes = function($routeProvider) {
     $routeProvider.
@@ -33,7 +31,6 @@ define([
     routerCallback     : routes,
     controllerCallback : controllers,
     serviceCallback    : services,
-    filterCallback     : filters,
-    pluginHandler      : pluginHandler
+    filterCallback     : filters
   };
 });

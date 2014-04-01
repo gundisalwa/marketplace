@@ -21,12 +21,12 @@ requirejs.config({
     'angular-mocks': 'lib/provided/common-ui/resources/web/angular/angular-mocks',
     'angular-scenario': 'lib/provided/common-ui/resources/web/angular/angular-scenario',
 
-    'common-ui/PluginHandler': 'lib/provided/common-ui/resources/web/plugin-handler/pluginHandler',
+    /*'common-ui/PluginHandler': 'lib/provided/common-ui/resources/web/plugin-handler/pluginHandler',
     'common-ui/Plugin': 'lib/provided/common-ui/resources/web/plugin-handler/plugin',
     'common-ui/AngularPluginHandler': 'lib/provided/common-ui/resources/web/plugin-handler/angularPluginHandler',
     'common-ui/AngularPlugin': 'lib/provided/common-ui/resources/web/plugin-handler/angularPlugin',
     'common-ui/AnimatedAngularPluginHandler': 'lib/provided/common-ui/resources/web/plugin-handler/animatedAngularPluginHandler',
-    'common-ui/AnimatedAngularPlugin': 'lib/provided/common-ui/resources/web/plugin-handler/animatedAngularPlugin',
+    'common-ui/AnimatedAngularPlugin': 'lib/provided/common-ui/resources/web/plugin-handler/animatedAngularPlugin',*/
 
     'common-ui/angular-animate': 'lib/provided/common-ui/resources/web/angular/angular-animate',
     'common-ui/jquery': 'lib/provided/common-ui/resources/web/jquery/jquery-1.9.1.min',
@@ -44,7 +44,7 @@ requirejs.config({
     'angular-mocks': { deps: ['common-ui/angular-resource'] },
     
     'common-ui/jquery': { exports: '$' },
-    'common-ui/PluginHandler': { deps: ['common-ui/jquery'] },
+    /*'common-ui/PluginHandler': { deps: ['common-ui/jquery'] },*/
     'common-ui/angular-animate': { deps: ['common-ui/angular'] },
     'underscore': { exports: '_' },
     'common-ui/ring': { deps: ['underscore'], exports: 'ring' }

@@ -49,7 +49,7 @@
     <delete dir="${js.module.script.agg.dir}/app" />
     <delete dir="${js.module.script.agg.dir}/lib" />
     <delete dir="${js.build.output.dir}" />
-    <copy todir="${js.module.script.agg.dir}/app" overwrite="true">
+    <copy todir="${js.module.script.agg.dir}/lib" overwrite="true">
       <fileset dir="js-lib/expanded/">
         <include name="**/*"/>
       </fileset>
@@ -111,6 +111,7 @@
         <exclude name="**/resources/web/app/lib/provided/**" />
         <!-- don't copy anything in a test folder -->
         <exclude name="**/test/**" />
+        <exclude name="**/*.spec.js"/>
         <!-- remove all standalone references as well -->
         <exclude name="**/standalone*" />
       </fileset>
@@ -123,6 +124,7 @@
         <exclude name="**/resources/web/app/lib/provided/**" />
         <!-- don't copy anything in a test folder -->
         <exclude name="**/test/**" />
+        <exclude name="**/*.spec.js"/>
         <!-- remove all standalone references as well -->
         <exclude name="**/standalone*" />
         <exclude name="**/build.txt" />
